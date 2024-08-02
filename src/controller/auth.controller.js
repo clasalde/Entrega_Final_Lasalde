@@ -110,7 +110,7 @@ class AuthController {
       });
 
       res.redirect("/views/products");
-    } catch (err) {
+    } catch (error) {
       console.log("error_:", error);
       res.status(400).send({ error: "Error en el login" });
     }
@@ -134,7 +134,7 @@ class AuthController {
   async current(req, res) {
     try {
       res.send({ user: req.user });
-    } catch (err) {
+    } catch (error) {
       console.log("error_:", error);
       res.status(400).send({ error: "Error en el login" });
     }
@@ -145,13 +145,13 @@ class AuthController {
     try {
       const user = await UserModel.findOne({ email });
       if (!user) {
-        return res.status(404).send("Usuario no encontrado");
+        return res.status(404).send("User not found!");
       }
       const token = generateResetToken();
 
       user.resetToken = {
         token: token,
-        expiresAt: new Date(Date.now() + 36),
+        expiresAt: new Date(Date.now() + 3600000),
       };
       await user.save();
       await emailManager.enviarCorreoRestablecimiento(
@@ -178,7 +178,6 @@ class AuthController {
       if (!resetToken || resetToken.token !== token) {
         return res.redirect("/views/password?errorCode=1");
       }
-
       const now = new Date();
       if (now > resetToken.expiresAt) {
         return res.redirect("/views/request_password_reset?errorCode=0");

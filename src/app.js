@@ -1,7 +1,6 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
-// const PORT = 8080;
 const productsRouter = require("./routes/products.router");
 const cartsRouter = require("./routes/carts.router");
 const authRouter = require("./routes/auth.router.js");
@@ -13,17 +12,13 @@ const initializePassport = require("./config/passport.config.js");
 const passport = require("passport");
 const cookieParser = require("cookie-parser");
 const addLogger = require("./utils/logger.js");
-
 const swaggerJSDoc = require("swagger-jsdoc");
 const swaggerUiExpress = require("swagger-ui-express");
-// import swaggerJSDoc from "swagger-jsdoc";
-// import swaggerUiExpress from "swagger-ui-express"; 
 
 // initiate db
 require("./database.js");
 // initiate passport
 initializePassport();
-
 
 // Middlewares
 app.use(express.urlencoded({ extended: true }));
@@ -57,12 +52,10 @@ const swaggerOptions = {
 }
 const specs = swaggerJSDoc(swaggerOptions);
 
-
 // Server init
 const httpServer = app.listen(process.env.PORT, () => {
   console.log(`Listening to port ${process.env.PORT}`);
 });
-
 
 // Routes
 app.use("/",   (req, res, next) => {
@@ -79,6 +72,3 @@ app.use("/views",   (req, res, next) => {
   next();
 },viewsRouter);
 app.use("/apidocs", swaggerUiExpress.serve, swaggerUiExpress.setup(specs));
-
-
-

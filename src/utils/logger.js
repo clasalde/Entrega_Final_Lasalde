@@ -22,7 +22,6 @@ const niveles = {
   },
 };
 
-//Creamos un nuevo Logger pero ahora configurando los niveles y los colores a nuestro gusto.
 const logger = winston.createLogger({
   levels: niveles.nivel,
   transports: [

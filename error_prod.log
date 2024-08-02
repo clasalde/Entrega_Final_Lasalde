@@ -1,2 +1,7 @@
 error: Error while adding product from cart. Layer:Controller, Router: Cart. Error: VersionError: No matching document found for id "669fbdca049e6b6fb1e74bc8" version 9 modifiedPaths "products, products.0, products.0.quantity", Date: Tue Jul 23 2024 15:19:37 GMT-0300 (hora estándar de Argentina)
 error: Error while rendering products page. Layer:Controller, Router: Views. Error: Error: Error mongo (get cart): Cart not found, Date: Sat Jul 27 2024 18:36:06 GMT-0300 (hora estándar de Argentina)
+error: Error while deleting user by id. Layer:Controller, Router: Users. Error: TypeError: inactiveUsers is not iterable, Date: Fri Aug 02 2024 08:48:56 GMT-0300 (hora estándar de Argentina)
+error: Error while deleting user by id. Layer:Controller, Router: Users. Error: TypeError: inactiveUsers is not iterable, Date: Fri Aug 02 2024 08:48:57 GMT-0300 (hora estándar de Argentina)
+error: Error while deleting user by id. Layer:Controller, Router: Users. Error: TypeError: inactiveUsers is not iterable, Date: Fri Aug 02 2024 08:48:58 GMT-0300 (hora estándar de Argentina)
+error: Error while deleting user by id. Layer:Controller, Router: Users. Error: TypeError: inactiveUsers is not iterable, Date: Fri Aug 02 2024 08:48:59 GMT-0300 (hora estándar de Argentina)
+error: Error while deleting user by id. Layer:Controller, Router: Users. Error: TypeError: inactiveUsers is not iterable, Date: Fri Aug 02 2024 09:18:59 GMT-0300 (hora estándar de Argentina)

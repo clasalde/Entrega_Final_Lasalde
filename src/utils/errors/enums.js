@@ -6,7 +6,6 @@ const EErrors = {
     NOT_FOUND: 5
 }
 
-
 module.exports = {
     EErrors
 }

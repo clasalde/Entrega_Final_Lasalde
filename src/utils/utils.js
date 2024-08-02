@@ -31,7 +31,4 @@ function generateTicketCode() {
   return randomId;
 }
 
-
-
-
 module.exports = { handleQueryString, checkNewProduct, generateTicketCode };

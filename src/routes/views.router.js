@@ -6,7 +6,6 @@ const viewsController = new ViewsController();
 
 router.use(express.static("./src/public"));
 
-
 // Middlewares
 
 // redirect login and register
@@ -29,7 +28,6 @@ function adminMiddleware(req, res, next) {
   }
 }
 
-
 // check rol for user routes
 function userMiddleware(req, res, next) {
   if (req.user.rol == "user" || req.user.rol  == "premium") {
@@ -38,7 +36,6 @@ function userMiddleware(req, res, next) {
     res.redirect("/views/realtime_products")
   }
 }
-
 
 function passportAuth(req, res, next) {
   passport.authenticate("jwt", {
@@ -53,58 +50,39 @@ router.get("/",
   userMiddleware,
   viewsController.renderProducts
 );
-
 router.get(
   "/cart",
   passportAuth,
   userMiddleware,
   viewsController.renderCart
 );
-
 router.get(
   "/products",
   passportAuth,
   userMiddleware,
   viewsController.renderProducts
 );
-
 router.get(
   "/product",
   passportAuth,
   userMiddleware,
   viewsController.renderProduct
 );
-
-
-
-
 router.get("/login", authenticateJWT, viewsController.renderLogin);
-
 router.get("/register", authenticateJWT, viewsController.renderRegister);
-
 router.get(
   "/realtime_products",
   passportAuth, adminMiddleware, 
   viewsController.renderRealtimeProducts
 );
-
 router.get("/ticket", passportAuth, userMiddleware, viewsController.renderTicket);
-
 router.get("/profile", passportAuth, viewsController.renderProfile)
-
 router.get("/chat", passportAuth, userMiddleware, viewsController.renderChat);
-
 router.get("/test", passportAuth, adminMiddleware, viewsController.test);
-
 router.get("/mocking_products", passportAuth, userMiddleware, viewsController.renderMockingProducts);
-
 router.get("/request_password_reset", viewsController.renderResetPassword)
-
 router.get("/password", viewsController.renderChangePassword);
-
 router.get("/confirmation_email_sent", viewsController.renderConfirmation);
-
 router.get("/users_settings", passportAuth, adminMiddleware, viewsController.renderUsersSettings)
-
 
 module.exports = router;

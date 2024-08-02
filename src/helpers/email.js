@@ -43,7 +43,7 @@ class EmailManager {
                     <p>Has solicitado restablecer tu contraseña. Utiliza el siguiente código para cambiar tu contraseña:</p>
                     <p><strong>${token}</strong></p>
                     <p>Este código expirará en 1 hora.</p>
-                    <a href=${process.env.BASE_URL}views/password">Restablecer Contraseña</a>
+                    <a href="${process.env.BASE_URL}views/password">Restablecer Contraseña</a>
                     <p>Si no solicitaste este restablecimiento, ignora este correo.</p>
                 `,
       };
