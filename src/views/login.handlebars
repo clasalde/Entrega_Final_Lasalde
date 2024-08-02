@@ -1,0 +1,57 @@
+<div class="authPage">
+  <div class="authContainer">
+    <form class="authCard" action="/api/auth/login" method="POST">
+      <img class="veggieLife" src="images/veggielife.png" alt="Veggie Life" />
+      <div class="authTitle"><span class="toOurW">Please </span>LOGIN <span class="toOurW">to Our World</span></div>
+      <label for="email"></label>
+      <input
+        class="input"
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="Email"
+      />
+      <br />
+      <label for="password"></label>
+      <input
+        class="input"
+        type="password"
+        id="password"
+        name="password"
+        required
+        placeholder="Password"
+      />
+      <br />
+      <button class="button" type="submit">SIGN IN</button>
+      <div class="githubAuth">
+        <a class="aFix" href="/api/auth/github">
+          <img class="githubLogo" src="images/github-mark-white.png" />
+        </a>
+      </div>
+      <div class="authRedirect">Don't have an account?
+        <a class="aFix" href="/views/register">Sign up</a>
+      </div>
+
+      <div class="authRedirect">Forgot your password?
+        <a class="aFix" href="/views/request_password_reset">Reset password</a>
+      </div>
+    </form>
+    
+    <div class="imgContainer">
+      <img
+        class="loginImg"
+        src="images/logo_img.png"
+        alt="Login Cartoon"
+      />
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  const error =
+  {{{jsonStringify error}}}
+</script>
+
+<script src="js/login.js"></script>

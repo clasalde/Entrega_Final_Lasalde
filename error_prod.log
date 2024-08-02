@@ -1,0 +1,2 @@
+error: Error while adding product from cart. Layer:Controller, Router: Cart. Error: VersionError: No matching document found for id "669fbdca049e6b6fb1e74bc8" version 9 modifiedPaths "products, products.0, products.0.quantity", Date: Tue Jul 23 2024 15:19:37 GMT-0300 (hora estándar de Argentina)
+error: Error while rendering products page. Layer:Controller, Router: Views. Error: Error: Error mongo (get cart): Cart not found, Date: Sat Jul 27 2024 18:36:06 GMT-0300 (hora estándar de Argentina)

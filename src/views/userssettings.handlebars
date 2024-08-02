@@ -1,0 +1,42 @@
+{{> appbar}}
+
+<div id="usersSettingsContainer">
+</div>
+
+
+  <script id="user-template" type="text/x-handlebars-template">
+    <div>User Settings</div>
+    <button id="deleteAllInactiveButton">Delete all inactive users</button>
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Rol</th>
+        <th>Delete</th>
+      </tr>
+      \{{#each users as |users|}}
+      <tr>
+        <td>\{{this.first_name}}</td>
+        <td>\{{this.last_name}}</td>
+        <td>\{{this.email}}</td>
+        <td>
+          <select  id="\{{this._id}}Select">
+            <option value="user">User</option>
+            <option value="premium">Premium</option>
+            <option value="admin">Admin</option>
+          </select>
+        </td>
+          <td>
+          <button id="\{{this._id}}Delete">Delete</button>
+        </td>
+      \{{/each}}
+  </table>
+</script>
+
+
+
+<script>
+  let BASE_URL = {{{jsonStringify base_url}}}
+</script>
+<script src="js/usersSettings.js"></script>

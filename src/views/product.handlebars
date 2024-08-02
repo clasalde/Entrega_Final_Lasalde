@@ -1,0 +1,46 @@
+{{> appbar}}
+<div id="individualProductContainer">
+  <div class="individualProductCard">
+    <div class="individualProductImageContainer">
+      <img class="productImageMock" src={{product.img}} src="product_image"/>
+    </div>
+
+    <div class="individualProductTextContainer">
+      <div class="profileText">
+        <div>Producto: </div>
+        <div>{{product.title}}</div>
+      </div>
+      <div class="profileText">
+        <div>Precio:</div>
+        <div>$ {{product.price}}</div>
+      </div>
+      <div class="profileText">
+        <div>Categoria: </div>
+        <div>{{product.category}}</div>
+      </div>
+      <div class="profileText">
+        <div>Stock disponible: </div>
+        <div>{{product.stock}}</div>
+      </div>
+        <br>
+      <div class="desc">{{product.description}}</div>
+      <br>
+    </div>
+    <div class="quantityContainer fixMargin2">
+      <button id="decreaseButton" class="arrowButton"><</button>
+      <div id="counter" class="quantityCounter">1</div>
+      <button id="increaseButton" class="arrowButton">></button>
+    </div>
+    <button id="addToCart" class="button"> ADD TO CART </button>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  let product = {{{jsonStringify product}}};
+  let user = {{{jsonStringify user}}};
+  let BASE_URL = {{{jsonStringify base_url}}}
+
+</script>
+<script src="js/product.js"></script>
