@@ -15,7 +15,7 @@ class EmailManager {
   async enviarCorreoCompra(email, first_name, ticket) {
     try {
       const mailOptions = {
-        from: "Coder Test <calasalde@gmail.com>",
+        from: "VeggieLife <calasalde@gmail.com>",
         to: email,
         subject: "Confirmación de compra",
         html: `
