@@ -123,16 +123,16 @@ class CartsController {
       const cartId = req.params.cid;
       const response = await cartsServices.finishPurchase(cartId);
 
-      //Prueba envio de mail por Claudio
+      // //Prueba envio de mail por Claudio
 
-      await emailManager.enviarCorreoCompra(
-        email,
-        user.first_name,
-        ticket
-      );
-      res.redirect("/");
+      // await emailManager.enviarCorreoCompra(
+      //   email,
+      //   user.first_name,
+      //   ticket
+      // );
+      // res.redirect("/");
 
-      // termina prueba mail de confirmacion compra claudio
+      // // termina prueba mail de confirmacion compra claudio
 
       res.status(200).json({ ticket: response });
     } catch (err) {
