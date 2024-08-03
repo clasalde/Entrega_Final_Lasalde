@@ -57,7 +57,7 @@ const buildCartView = () => {
 buildCartView();
 
 const deleteProductFromCart = (cartId, prodId) => {
-  var url = BASE_URL + `api/cart/${cartId}/product/${prodId}`;
+  const url = BASE_URL + `api/cart/${cartId}/product/${prodId}`;
   fetch(url, {
     method: "DELETE",
     headers: {
@@ -82,7 +82,7 @@ const deleteProductFromCart = (cartId, prodId) => {
 };
 
 const finishPurchase = (cartId) => {
-  var url = BASE_URL + `api/cart/${cartId}/purchase`;
+  const url = BASE_URL + `api/cart/${cartId}/purchase`;
   fetch(url, {
     method: "GET",
     headers: {
