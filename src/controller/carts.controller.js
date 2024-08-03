@@ -131,7 +131,6 @@ class CartsController {
         user.first_name,
         ticket
       );
-      res.redirect("/");
 
       // // termina prueba mail de confirmacion compra claudio
 
