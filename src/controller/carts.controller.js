@@ -122,6 +122,22 @@ class CartsController {
     try {
       const cartId = req.params.cid;
       const response = await cartsServices.finishPurchase(cartId);
+
+      //Prueba envio de mail por Claudio
+
+      await emailManager.enviarCorreoCompra(
+        email,
+        user.first_name,
+        ticket
+      );
+      res.redirect("/");
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Error interno del servidor");
+    }
+
+      // termina prueba mail de confirmacion compra claudio
+
       res.status(200).json({ ticket: response });
     } catch (err) {
       req.logger.error(

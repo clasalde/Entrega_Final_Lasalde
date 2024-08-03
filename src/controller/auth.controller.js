@@ -278,13 +278,13 @@ class AuthController {
 
       await user.save();
 
-      res.status(200).send("Documentos cargados exitosamente");
+      res.status(200).send("Files Successfully Uploaded");
     } catch (error) {
       console.log(error);
       res
         .status(500)
         .send(
-          "Error interno del servidor, los mosquitos seran cada vez mas grandes"
+          "Internal Server Error"
         );
     }
   }
