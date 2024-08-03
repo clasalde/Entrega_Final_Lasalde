@@ -126,12 +126,10 @@ class CartsController {
 
       // //Prueba envio de mail por Claudio
 
-      await emailManager.enviarCorreoCompra(
-        email,
-        user.first_name,
-        ticket
-      );
 
+
+
+      
       // // termina prueba mail de confirmacion compra claudio
 
     } catch (err) {
