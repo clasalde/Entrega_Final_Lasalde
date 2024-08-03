@@ -122,19 +122,19 @@ class CartsController {
     try {
       const cartId = req.params.cid;
       const response = await cartsServices.finishPurchase(cartId);
+      res.status(200).json({ ticket: response });
 
       // //Prueba envio de mail por Claudio
 
-      // await emailManager.enviarCorreoCompra(
-      //   email,
-      //   user.first_name,
-      //   ticket
-      // );
-      // res.redirect("/");
+      await emailManager.enviarCorreoCompra(
+        email,
+        user.first_name,
+        ticket
+      );
+      res.redirect("/");
 
       // // termina prueba mail de confirmacion compra claudio
 
-      res.status(200).json({ ticket: response });
     } catch (err) {
       req.logger.error(
         `Error while finishing purchase. Layer:${layer}, Router: ${router}. Error: ${err}, Date: ${new Date()}`
