@@ -131,10 +131,6 @@ class CartsController {
         ticket
       );
       res.redirect("/");
-    } catch (error) {
-      console.error(error);
-      res.status(500).send("Error interno del servidor");
-    }
 
       // termina prueba mail de confirmacion compra claudio
 
