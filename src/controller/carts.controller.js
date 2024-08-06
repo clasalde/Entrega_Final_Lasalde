@@ -48,7 +48,6 @@ class CartsController {
       const { cid } = req.params;
       if (cid) {
         const status = await cartsServices.deleteProductsFromCart(cid);
-        // const status = await cartManagerDb.deleteAllProductsFromCart(cid);
         res.status(200).json({ messsage: status });
       }
     } catch (err) {
@@ -123,15 +122,6 @@ class CartsController {
       const cartId = req.params.cid;
       const response = await cartsServices.finishPurchase(cartId);
       res.status(200).json({ ticket: response });
-
-      // //Prueba envio de mail por Claudio
-
-
-
-
-      
-      // // termina prueba mail de confirmacion compra claudio
-
     } catch (err) {
       req.logger.error(
         `Error while finishing purchase. Layer:${layer}, Router: ${router}. Error: ${err}, Date: ${new Date()}`

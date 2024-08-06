@@ -48,6 +48,7 @@ const buildCartView = () => {
     submitButton.classList.add("align");
     submitButton.addEventListener("click", () => {
       finishPurchase(cart._id);
+      console.log("funciono")
     });
     submitButton.innerHTML = "FINISH PURCHASE";
     cartContainer.appendChild(submitButton);
