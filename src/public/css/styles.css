@@ -27,7 +27,6 @@ input[disabled] {
   color: white;
   font-size: 0.9rem;
   font-weight: 600;
-  border-radius: 8px;
   padding: 0.75rem;
   margin: auto;
   margin-bottom: 10px;
@@ -81,7 +80,6 @@ input[disabled] {
   gap: 20px;
 }
 
-/* Clases para nueva pagina de products */
 #productCardsContainer {
   display: flex;
   flex-wrap: wrap;
@@ -94,9 +92,7 @@ input[disabled] {
 
 .productCard {
   min-width: 250px;
-  background-color: #0c1b1b;
   height: 50vh;
-  border-radius: 15px;
 }
 
 .productImage {
@@ -176,11 +172,11 @@ input[disabled] {
 }
 
 .deleteButtonCart {
-  background-color: darkred;
+  background-color: rgb(255, 3, 3);
+  color:rgb(255, 255, 255);
   padding: 0.5rem;
   margin-left: 1rem;
   height: 20%;
-  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -188,10 +184,8 @@ input[disabled] {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #0c1b1b;
   width: 100%;
-  color: white;
-  border-radius: 15px;
+  color: rgb(0, 0, 0);
   height: 200px;
 }
 
@@ -207,11 +201,9 @@ input[disabled] {
 .cartCardImageContainer {
   width: 40%;
   height: 100%;
-  border-radius: 0 15px 15px 0;
 }
 
 .cartCardImage {
-  border-radius: 0 15px 15px 0;
   background-color: rgb(255, 255, 255);
   height: 100%;
   width: 100%;
@@ -219,31 +211,27 @@ input[disabled] {
 }
 
 .cartTotal {
-  color: white;
-  border-radius: 10px;
-  border: 1px solid black;
+  background-color: #75b3f0;
   padding: 1rem 0.5rem;
-  background-color: #0c1b1b;
   display: flex;
   justify-content: center;
+  width: 30%;
+  margin: auto;
 }
 
 .disabled {
   pointer-events: none;
-  background-color: grey;
 }
 
 #pageButtonsContainer {
   display: flex;
-  margin: 1rem;
+  margin: 1.5rem;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 #pageCounter {
-  color: white;
-  border-radius: 10px;
-  background-color: #0c1b1b;
+  color: rgb(0, 0, 0);
   padding: 1rem;
 }
 
@@ -294,13 +282,12 @@ input[disabled] {
 }
 
 .authCard {
-  height: 490px;
+  border: 2px solid rgb(18, 255, 18);
   display: flex;
-  flex-direction: column;
+  align-items: center;
   padding: 2rem;
-  background-color: #535353;
-  filter: brightness(120%);
-  color: #ffffff;
+  color: #000000;
+  gap: 2rem;
 }
 
 .mtop-2 {
@@ -466,8 +453,8 @@ input[disabled] {
 
 /* profile */
 .profilePage {
+  height: 80vh;
   display: flex;
-  flex-direction: column;
   width: 100vw;
   gap: 1rem;
 }
@@ -476,22 +463,11 @@ input[disabled] {
   justify-content: center;
 }
 
-/* .profileCard {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    background-color: #0c1b1b;
-    color: #009B72;
-    border-radius: 20px;
-    min-width: 300px;
-    min-height: 200px;
-} */
-
 .profileContainer {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin: 2rem auto auto auto;
+  margin: auto;
 }
 
 .profileText {
@@ -502,12 +478,17 @@ input[disabled] {
 }
 
 .placeholderImage {
-  align-self: center;
-  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #00ff04;
   border-radius: 50%;
-  height: 200px;
+  height: 150px;
+  width: 150px;
+}
+
+.profileBox {
   width: 200px;
-  margin: 1rem 0 5rem 0;
 }
 
 .hidden {
@@ -524,13 +505,11 @@ input[disabled] {
 }
 
 .messagesLogs {
-  border-radius: 10px;
-  border: 5px solid rgb(13, 37, 37);
-  background-color: darkslategray;
+  border: 2px solid #00ff04;
   display: flex;
   flex-direction: column;
-  max-height: 70vh;
-  min-height: 70vh;
+  max-height: 50vh;
+  min-height: 50vh;
   overflow-y: scroll;
   margin: 1rem;
   scroll-behavior: smooth;
@@ -544,7 +523,7 @@ input[disabled] {
   color: black;
   margin: 1rem;
   padding: 1rem;
-  background-color: lightgreen;
+  background-color: rgb(18, 255, 18);
   border-radius: 15px;
   width: fit-content;
   align-self: flex-end;
@@ -554,7 +533,7 @@ input[disabled] {
   color: black;
   margin: 1rem;
   padding: 1rem;
-  background-color: lightgray;
+  background-color: rgb(112, 217, 219);
   border-radius: 15px;
   width: fit-content;
 }
@@ -576,8 +555,7 @@ input[disabled] {
 
 .chatInput {
   width: 100%;
-  border: 5px solid rgb(13, 37, 37);
-  border-radius: 10px;
+  border: 2px solid #00ff04;
   padding: 1rem;
   margin: 1rem;
 }
@@ -631,13 +609,14 @@ input[disabled] {
 
 .goBackButton {
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .align {
   max-width: 1000px;
-  background-color: #0c1b1b;
-  width: 100%;
+  color:rgb(0, 0, 0);
+  background-color: #66ff00;
+  width: 30%;
   display: flex;
   margin: auto;
 }
