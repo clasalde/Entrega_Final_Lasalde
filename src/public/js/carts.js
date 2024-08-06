@@ -74,7 +74,6 @@ const deleteProductFromCart = (cartId, prodId) => {
       };
       cartContainer.innerHTML = "";
       buildCartView();
-      // Add a snackbar of product added!
     })
     .catch((error) => {
       console.error("Error fetching data:", error);

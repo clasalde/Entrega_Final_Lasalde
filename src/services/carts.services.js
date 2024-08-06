@@ -106,7 +106,6 @@ class CartsServices {
     cart.markModified("products");
     await cart.save();
     const ticketData = {
-      // TODO
       code: generateTicketCode(),
       purchase_datetime: new Date(),
       amount: total,

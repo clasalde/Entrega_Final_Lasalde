@@ -6,7 +6,6 @@ const cartsController = new CartsController();
 router.use(express.static("./src/public"));
 
 
-// TEST THESE
 router.get("/:cid", cartsController.getCartById);
 
 router.post("/", cartsController.createCart);
