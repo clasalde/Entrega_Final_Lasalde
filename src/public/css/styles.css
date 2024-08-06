@@ -90,9 +90,15 @@ input[disabled] {
   gap: 1.5rem;
 }
 
+.authCardLogin {
+  display: flex;
+  flex-direction: column;
+}
+
 .productCard {
   min-width: 250px;
   height: 50vh;
+  background-color: #1a3a3a;
 }
 
 .productImage {
@@ -264,11 +270,18 @@ input[disabled] {
   justify-content: center;
 }
 
+.authContainerLogin {
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .imgContainer {
   height: 490px;
   display: flex;
   justify-content: center;
-  background-color: #535353;
   filter: brightness(120%);
 }
 
@@ -304,7 +317,7 @@ input[disabled] {
 .authRedirect {
   font-weight: 100;
   font-size: 0.9rem;
-  align-self: center;
+  align-self: left;
 }
 
 .toOurW {
@@ -373,7 +386,7 @@ input[disabled] {
 
 .aFix {
   text-decoration: none;
-  color: white;
+  color: rgb(4, 148, 23);
   font-weight: 500;
 }
 
