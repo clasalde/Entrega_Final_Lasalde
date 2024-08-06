@@ -5,7 +5,7 @@ const UserModel = require("../models/user.model.js");
 const ticketsService = new TicketsService();
 const cartsRepository = new CartsRepository();
 const productsRepository = new ProductsRepository();
-const {generateTicketCode} = require("../utils/utils.js");
+const { generateTicketCode } = require("../utils/utils.js");
 
 class CartsServices {
   async getCartById(id) {
@@ -110,9 +110,20 @@ class CartsServices {
       purchase_datetime: new Date(),
       amount: total,
       purchaser: user.email,
-      purchaserId: user._id
+      purchaserId: user._id,
+    };
+    const ticket = await ticketsService.createTicket(ticketData);
+    try {
+      if (user && user.email) {
+        await emailManager.enviarCorreoCompra(
+          user.email,
+          user.first_name,
+          ticket.code
+        );
+      }
+    } catch (error) {
+      console.error("Error al enviar correo de confirmación:", error);
     }
-    const ticket = await ticketsService.createTicket(ticketData)
     return ticket;
   }
 }

@@ -12,25 +12,7 @@ class EmailManager {
     });
   }
 
-  // async enviarCorreoCompra(email, first_name, ticket) {
-  //   try {
-  //     const mailOptions = {
-  //       from: "calasalde@gmail.com",
-  //       to: email,
-  //       subject: "Confirmación de compra",
-  //       html: `
-  //                   <h1>Confirmación de compra</h1>
-  //                   <p>Gracias por tu compra, ${first_name}!</p>
-  //                   <p>El número de tu orden es: ${ticket}</p>
-  //               `,
-  //     };
-  //     await this.transporter.sendMail(mailOptions);
-  //   } catch (error) {
-  //     console.error("Error al enviar el correo electrónico:", error);
-  //   }
-  // }
-
-  async enviarCorreoCompra(email, first_name) {
+  async enviarCorreoCompra(email, first_name, ticketCode) {
     try {
       const mailOptions = {
         from: "calasalde@gmail.com",
@@ -39,14 +21,15 @@ class EmailManager {
         html: `
                     <h1>Confirmación de compra</h1>
                     <p>Gracias por tu compra, ${first_name}!</p>
+                    <p>El número de tu orden es: ${ticketCode}</p>
                 `,
       };
       await this.transporter.sendMail(mailOptions);
     } catch (error) {
       console.error("Error al enviar el correo electrónico:", error);
+      throw error;
     }
   }
-
 
   async enviarCorreoRestablecimiento(email, first_name, token) {
     try {
