@@ -13,48 +13,22 @@ class EmailManager {
   }
 
   async enviarCorreoCompra(email, first_name, ticket) {
-    return new Promise((resolve, reject) => {
+    try {
       const mailOptions = {
-        from: "VeggieLife <calasalde@gmail.com>",
+        from: "calasalde@gmail.com",
         to: email,
         subject: "Confirmación de compra",
         html: `
-          <h1>Confirmación de compra</h1>
-          <p>Gracias por tu compra, ${first_name}!</p>
-          <p>El número de tu orden es: ${ticket}</p>
-        `,
+                    <h1>Confirmación de compra</h1>
+                    <p>Gracias por tu compra, ${first_name}!</p>
+                    <p>El número de tu orden es: ${ticket}</p>
+                `,
       };
-
-      this.transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          console.error("Error detallado al enviar el correo:", error);
-          reject(error);
-        } else {
-          console.log("Correo enviado exitosamente:", info.response);
-          resolve(info);
-        }
-      });
-    });
+      await this.transporter.sendMail(mailOptions);
+    } catch (error) {
+      console.error("Error al enviar el correo electrónico:", error);
+    }
   }
-
-  // async enviarCorreoCompra(email, first_name, ticket) {
-  //   try {
-  //     const mailOptions = {
-  //       from: "VeggieLife <calasalde@gmail.com>",
-  //       to: email,
-  //       subject: "Confirmación de compra",
-  //       html: `
-  //                   <h1>Confirmación de compra</h1>
-  //                   <p>Gracias por tu compra, ${first_name}!</p>
-  //                   <p>El número de tu orden es: ${ticket}</p>
-  //               `,
-  //     };
-
-  //     await this.transporter.sendMail(mailOptions);
-  //   } catch (error) {
-  //     console.error("Error al enviar el correo electrónico:", error);
-  //   }
-  // }
 
   async enviarCorreoRestablecimiento(email, first_name, token) {
     try {
