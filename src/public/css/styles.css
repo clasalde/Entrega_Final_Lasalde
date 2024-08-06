@@ -296,6 +296,13 @@ input[disabled] {
   justify-content: center;
 }
 
+.authContainerNewPassword {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .imgContainer {
   height: 490px;
   display: flex;
@@ -319,6 +326,16 @@ input[disabled] {
   padding: 2rem;
   color: #000000;
   gap: 2rem;
+}
+
+.authCardNewPassword {
+  border: 2px solid rgb(18, 255, 18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: #000000;
+  gap: 10px;
 }
 
 .mtop-2 {
