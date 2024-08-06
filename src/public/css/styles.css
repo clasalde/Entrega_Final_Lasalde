@@ -5,8 +5,7 @@
 }
 
 body {
-  font-family: "roboto", sans-serif;
-  letter-spacing: 1px;
+  font-family: "arial", sans-serif;
   font-weight: 300;
   background-color: #fcfcfc;
 }
@@ -94,6 +93,18 @@ input[disabled] {
   display: flex;
   flex-direction: column;
 }
+
+.authCardRegister {
+  display: flex;
+  flex-direction: column;
+}
+
+.authCardReset {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 
 .productCard {
   min-width: 250px;
@@ -278,6 +289,13 @@ input[disabled] {
   justify-content: center;
 }
 
+.authContainerReset {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .imgContainer {
   height: 490px;
   display: flex;
@@ -317,7 +335,7 @@ input[disabled] {
 .authRedirect {
   font-weight: 100;
   font-size: 0.9rem;
-  align-self: left;
+  align-self: center;
 }
 
 .toOurW {
