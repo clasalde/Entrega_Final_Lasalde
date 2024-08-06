@@ -1,4 +1,3 @@
-## TODO add ticket model, add products to Cart Schema
 paths:
   /api/cart:
     post:
@@ -384,4 +383,3 @@ components:
           thumbnails: ["http://example.com/thumb1.jpg"]
           owner: "user123"
           quantity: 1
-          

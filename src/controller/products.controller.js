@@ -132,18 +132,6 @@ class ProductController {
       res.status(500).json(err);
     }
   }
-
-  // async renderResetPassword(req, res) {
-  //   res.render("passwordreset");
-  // }
-
-  // async renderCambioPassword(req, res) {
-  //   res.render("passwordcambio");
-  // }
-
-  // async renderConfirmacion(req, res) {
-  //   res.render("confirmacion-envio");
-  // }
 }
 
 module.exports = ProductController;

@@ -51,7 +51,6 @@ const initializePassport = () => {
     )
   );
 
-  //Agregamos otra estrategia, ahora para el "login":
   passport.use(
     "login",
     new LocalStrategy(
@@ -74,13 +73,11 @@ const initializePassport = () => {
           return done(null, user);
         } else {
           try {
-            //Primero verifico si existe un usuario con ese email:
             const user = await UserModel.findOne({ email });
             if (!user) {
               console.log("User doest exist");
               return done(null, false);
             }
-            //Si existe, verifico la contraseña:
             if (!isValidPassword(password, user)) return done(null, false);
             return done(null, user);
           } catch (error) {
@@ -100,11 +97,9 @@ const initializePassport = () => {
         callbackURL: process.env.CALLBACK_URL,
       },
       async (accessToken, refreshToken, profile, done) => {
-        //Opcional: si ustedes quieren ver como llega el perfil del usuario:
         try {
           let user = await UserModel.findOne({ email: profile._json.email });
           if (!user) {
-            //Si no encuentro ningun usuario con este email, lo voy a crear:
             const newCartId = await cartServices.createCart();
 
             let newUser = {
@@ -162,8 +157,7 @@ const initializePassport = () => {
         }
       }
     )
-  );
-  
+  );  
 };
 
 const cookieExtractor = (req) => {

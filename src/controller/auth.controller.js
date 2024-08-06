@@ -67,10 +67,8 @@ class AuthController {
         cart: req.user.cart,
       };
 
-      // generamos token JWT
       const token = jwt.sign(userForToken, "coderhouse", { expiresIn: "1h" });
 
-      // mandamos como cookie el token
       res.cookie("coderCookieToken", token, {
         maxAge: 3600000,
         httpOnly: true,
@@ -215,7 +213,6 @@ class AuthController {
         const userDocuments = user.documents.map((e) => e.name);
         const docsExists = requiredDocs.every((e) => userDocuments.includes(e));
         if (docsExists) {
-          // const newRol = user.rol === "user" ? "premium" : "user";
           const updated = await UserModel.findByIdAndUpdate(uid, {
             rol: rol,
           });
@@ -274,18 +271,12 @@ class AuthController {
         }
       }
 
-      //Guardamos los cambios en la base de datos:
-
       await user.save();
 
       res.status(200).send("Files Successfully Uploaded");
     } catch (error) {
       console.log(error);
-      res
-        .status(500)
-        .send(
-          "Internal Server Error"
-        );
+      res.status(500).send("Internal Server Error");
     }
   }
 }

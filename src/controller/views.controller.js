@@ -338,7 +338,7 @@ class ViewsController {
           error = "Reset code is incorrect";
           break;
         case "2":
-          error = "New password can't be the same as the old one";
+          error = "New password must be different from previous";
           break;
         default:
           error = "Unknown error";
@@ -358,7 +358,6 @@ class ViewsController {
       const dtoUsers = users.map((e) => new UserAdminDto(e));
       res.render("userssettings", {
         user: req.user,
-        // users: dtoUsers,
         active: { usersSettings: true },
         base_url: process.env.BASE_URL.toString(),
       });
