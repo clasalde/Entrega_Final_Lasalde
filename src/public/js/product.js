@@ -43,7 +43,6 @@ function addProductToCart(prodId, quantity) {
   })
     .then((response) => {
       if (!response.ok) {
-        // Add a snackbar of product added!
         throw new Error("Network response was not ok");
       }
       return response.json();

@@ -1,34 +1,34 @@
 {{> appbar}}
 <div id="individualProductContainer">
-  <div class="individualProductCard">
+  <div class="individualProductCardA">
     <div class="individualProductImageContainer">
       <img class="productImageMock" src={{product.img}} src="product_image"/>
     </div>
 
     <div class="individualProductTextContainer">
-      <div class="profileText">
-        <div>Producto: </div>
+      <div class="profileTextA">
+        <div>Product: </div>
         <div>{{product.title}}</div>
       </div>
-      <div class="profileText">
-        <div>Precio:</div>
+      <div class="profileTextA">
+        <div>Price:</div>
         <div>$ {{product.price}}</div>
       </div>
-      <div class="profileText">
-        <div>Categoria: </div>
+      <div class="profileTextA">
+        <div>Category: </div>
         <div>{{product.category}}</div>
       </div>
-      <div class="profileText">
-        <div>Stock disponible: </div>
+      <div class="profileTextA">
+        <div>Available Stock: </div>
         <div>{{product.stock}}</div>
       </div>
         <br>
-      <div class="desc">{{product.description}}</div>
+      <div class="descA">{{product.description}}</div>
       <br>
     </div>
     <div class="quantityContainer fixMargin2">
       <button id="decreaseButton" class="arrowButton"><</button>
-      <div id="counter" class="quantityCounter">1</div>
+      <div id="counter" class="quantityCounterA">1</div>
       <button id="increaseButton" class="arrowButton">></button>
     </div>
     <button id="addToCart" class="button"> ADD TO CART </button>

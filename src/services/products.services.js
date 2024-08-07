@@ -22,7 +22,7 @@ class ProductsService {
     const query = queryObject.query;
     let products;
     let args = {
-      limit: limit || 10,
+      limit: limit || 6,
       page: page || 1,
       lean: true,
     };

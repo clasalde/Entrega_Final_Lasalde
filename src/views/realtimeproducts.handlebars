@@ -1,49 +1,47 @@
 {{> appbar}}
-<div style="font-family: Roboto">
-  <div class="containerReal">
-    <div class="realtimeProductsContainer" id="productsContainer"></div>
-    <form class="formReal">
-
+<div style="font-family: Arial">
+  <div class="containerRealTime">
+    <form class="formRealTime">
       <div class="formRow">
         <div class="labelAndInput">
-          <label class="labelReal" for="title">Título</label>
+          <label class="labelReal" for="title"></label>
           <input
             class="inputReal"
             type="text"
             id="title"
-            placeHolder="Título"
+            placeHolder="Product Name"
           />
         </div>
         <div class="labelAndInput">
-          <label class="labelReal" for="price">Precio</label>
+          <label class="labelReal" for="price"></label>
           <input
             class="inputReal"
             type="number"
             id="price"
-            placeHolder="Precio"
+            placeHolder="Price"
           />
         </div>
       </div>
 
       <div class="formRow">
         <div class="labelAndInput">
-          <label class="labelReal" for="img">Img</label>
+          <label class="labelReal" for="img"></label>
           <input
             class="inputReal"
             type="text"
             id="img"
-            placeHolder="Sin imagen"
+            placeHolder="Image URL"
           />
         </div>
         <div class="labelAndInput">
-          <label class="labelReal" for="code">Código</label>
-          <input class="inputReal" type="text" id="code" placeHolder="Código" />
+          <label class="labelReal" for="code"></label>
+          <input class="inputReal" type="text" id="code" placeHolder="Code" />
         </div>
       </div>
 
       <div class="formRow">
         <div class="labelAndInput">
-          <label class="labelReal" for="stock">Stock</label>
+          <label class="labelReal" for="stock"></label>
           <input
             class="inputReal"
             type="number"
@@ -52,37 +50,43 @@
           />
         </div>
         <div class="labelAndInput">
-          <label class="labelReal" for="category">Categoria</label>
+          <label class="labelReal" for="category"></label>
           <input
             class="inputReal"
             type="text"
             id="category"
-            placeHolder="Categoria"
+            placeHolder="Category"
           />
         </div>
       </div>
 
       <div class="formRow">
         <div class="labelAndInput">
-          <label class="labelReal" for="status">Status</label>
+          <label class="labelReal" for="status"></label>
           <select class="inputReal" id="status">
             <option value="true"> Activo </option>
             <option value="false"> Inactivo </option>
           </select>
         </div>
       </div>
-          <label class="labelReal" for="description">Descripción</label>
+          <label class="labelReal" for="description"></label>
           <textarea
             rows="6"
             class="inputReal"
             type="text"
             id="description"
-            placeHolder="Descripción"
+            placeHolder="Product Description"
           ></textarea>
-      <button class="button hidden" id="btnCancelEdit"> CANCEL EDIT </button>
-      <button class="button hidden" id="btnSubmitEdit"> SUBMIT EDIT </button>
-      <button class="button" id="btnSend"> E N V I A R </button>
+      <button class="button hidden" id="btnCancelEdit"> IGNORE CHANGES </button>
+      <button class="button hidden" id="btnSubmitEdit"> SUBMIT CHANGES </button>
+      <button class="button" id="btnSend"> SEND </button>
     </form>
+
+    <div class="realtimeProductsContainerNew">
+      <h4>"Click" on Product Card to <span class="red">EDIT</span> product</h4>
+      <div id="productsContainer"></div>
+    </div>
+
   </div>
 </div>
 

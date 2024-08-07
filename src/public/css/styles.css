@@ -82,11 +82,10 @@ input[disabled] {
 #productCardsContainer {
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
   max-width: 1000px;
   margin: auto;
   justify-content: space-around;
-  gap: 1.5rem;
+  gap: 80px;
 }
 
 .authCardLogin {
@@ -181,11 +180,17 @@ input[disabled] {
   gap: 1.5rem;
 }
 
+.red {
+  color: red;
+  font-weight: 700;
+}
+
 .cardAndIcon {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .deleteButtonCart {
@@ -203,6 +208,7 @@ input[disabled] {
   justify-content: space-between;
   width: 100%;
   color: rgb(0, 0, 0);
+  border: 3px solid green;
   height: 200px;
 }
 
@@ -210,7 +216,7 @@ input[disabled] {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 80%;
   gap: 0.5rem;
   padding: 1rem;
 }
@@ -224,7 +230,7 @@ input[disabled] {
   background-color: rgb(255, 255, 255);
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .cartTotal {
@@ -242,13 +248,13 @@ input[disabled] {
 
 #pageButtonsContainer {
   display: flex;
-  margin: 1.5rem;
+  margin-top: 70px;
   justify-content: center;
   gap: 0.5rem;
 }
 
 #pageCounter {
-  color: rgb(0, 0, 0);
+  color: rgb(68, 0, 255);
   padding: 1rem;
 }
 
@@ -272,6 +278,11 @@ input[disabled] {
 
 .authPage {
   height: 100%;
+}
+
+.userLogo {
+  width: 100%;
+  z-index: -100;
 }
 
 .authContainer {
@@ -317,6 +328,16 @@ input[disabled] {
 .veggieLife {
   width: 150px;
   margin: auto;
+}
+
+.quantityCounterA {
+  flex: .5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 0 1rem;
+  border: 1px solid rgb(60, 255, 0);
 }
 
 .authCard {
@@ -450,6 +471,16 @@ input[disabled] {
   height: 80vh;
 }
 
+.containerRealTime {
+  display: flex;
+  padding: 1rem;
+  max-width: 1300px;
+  margin: auto;
+  margin-top: 2rem;
+  justify-content: space-between;
+  height: 80vh;
+}
+
 .realtimeProductsContainer {
   scrollbar-color: #0c1b1b #009b72;
   width: 55%;
@@ -459,6 +490,15 @@ input[disabled] {
   flex-direction: column;
   padding: 1rem;
 }
+
+.realtimeProductsContainerNew {
+  width: 55%;
+  overflow-y: scroll;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
 
 .formReal {
   color: white;
@@ -470,6 +510,17 @@ input[disabled] {
   justify-content: start;
   border-radius: 10px;
 }
+
+.formRealTime {
+  color: white;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  background-color: #ffffff;
+  justify-content: start;
+}
+
 
 .card {
   border-radius: 10px;
@@ -524,6 +575,15 @@ input[disabled] {
   justify-content: space-between;
   font-size: 1rem;
 }
+
+.profileTextA {
+  color: #000000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
 
 .placeholderImage {
   display: flex;
@@ -626,6 +686,17 @@ input[disabled] {
   border-radius: 10px;
 }
 
+.individualProductCardA {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+}
+
+
 .individualProductImageContainer {
   border-radius: 10px 10px 0 0;
   height: 360px;
@@ -648,6 +719,15 @@ input[disabled] {
   font-size: 1.1rem;
   font-style: italic;
 }
+
+.descA {
+  color: #000000;
+  display: flex;
+  margin: auto;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
 
 .fixMargin2 {
   width: 90%;

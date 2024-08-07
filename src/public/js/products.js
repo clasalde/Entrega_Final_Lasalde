@@ -5,7 +5,6 @@ const nextButton = document.getElementById("nextButton");
 const pageCounter = document.getElementById("pageCounter");
 
 
-// build products components
 products.docs.forEach((product) => {
   let quantity = 1;
   const card = document.createElement("div");
@@ -39,7 +38,6 @@ products.docs.forEach((product) => {
 });
 
 
-// build change page components
 prevButton.classList.add("arrowButton");
 prevButton.innerHTML = "<";
 if (products.hasPrevPage) {
@@ -61,7 +59,6 @@ if (products.hasNextPage) {
 pageCounter.innerHTML = products.page;
 
 
-// requests
 function addProductToCart(prodId, quantity) {
   var url = BASE_URL + `api/cart/${user.cart}/product/${prodId}`;
   const product = products.docs.find(e => prodId == e._id);
@@ -82,7 +79,6 @@ function addProductToCart(prodId, quantity) {
   })
     .then((response) => {
       if (!response.ok) {
-        // Add a snackbar of product added!
         throw new Error("Network response was not ok");
       }
       Swal.fire({
