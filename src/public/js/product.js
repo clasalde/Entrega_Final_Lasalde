@@ -45,6 +45,10 @@ function addProductToCart(prodId, quantity) {
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
+      Swal.fire({
+        text: `${product.title} added to cart!`,
+        confirmButtonColor: "#04b907",
+      });
       return response.json();
     })
     .catch((error) => {
