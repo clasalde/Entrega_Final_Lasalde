@@ -9,7 +9,7 @@ console.log("user:", user);
 socket.on("products", (data) => {
   if (data === false) {
     Swal.fire({
-      title: "El código de producto ya esta en uso",
+      title: "Product code already in use",
       confirmButtonColor: "#1A3A3A",
     });
   } else {
@@ -111,8 +111,8 @@ const addProduct = (edit) => {
     )
   ) {
     Swal.fire({
-      title: "Error en el form!",
-      text: "Alguno de los campos esta vacio, o el precio se asigno como 0. Revisa los campos por favor.",
+      title: "Error on form!",
+      text: "Some field is empty, please verify",
       confirmButtonColor: "#1A3A3A",
     });
     console.log("error en input");
@@ -130,7 +130,7 @@ const addProduct = (edit) => {
       console.log("addProduct");
       socket.emit("addProduct", newProduct);
       Swal.fire({
-        title: "Producto agregado!",
+        title: "Product Added!",
         confirmButtonColor: "#1A3A3A",
       });
     }
