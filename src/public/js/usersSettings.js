@@ -6,7 +6,7 @@ const usersSettingsContainer = document.getElementById(
 
 const handleRolChange = (event, id) => {
   const value = event.target.value;
-  var url = BASE_URL + `api/auth/change_rol/` + id + "/" + value;
+  const url = BASE_URL + `api/auth/change_rol/` + id + "/" + value;
   fetch(url, {
     method: "PUT",
     headers: {
@@ -22,7 +22,7 @@ const handleRolChange = (event, id) => {
 };
 
 const deleteUser = (id) => {
-  var url = BASE_URL + `api/users/` + id;
+  const url = BASE_URL + `api/users/` + id;
   fetch(url, {
     method: "DELETE",
     headers: {
@@ -38,7 +38,7 @@ const deleteUser = (id) => {
 };
 
 const deleteAllInactive = () => {
-  var url = BASE_URL + `api/users/`;
+  const url = BASE_URL + `api/users/`;
   fetch(url, {
     method: "DELETE",
     headers: {
@@ -82,7 +82,7 @@ const renderTemplate = (data) => {
 };
 
 const getUsers = () => {
-  var url = BASE_URL + `api/users`;
+  const url = BASE_URL + `api/users`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
@@ -94,8 +94,5 @@ const getUsers = () => {
 getUsers();
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Your initialization code here, including renderTemplate function call
-  getUsers(); // Assuming usersData is your data array
+  getUsers(); 
 });
-
-// renderTemplate(users);
